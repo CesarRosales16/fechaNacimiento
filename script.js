@@ -67,11 +67,11 @@ function getAge(birthday) {
     }
     /*
      * Si el mes es el mismo, la edad la determina el dia de cumpleaños
-     * si el dia del cumpleaños es menor al dia actual, el cumpleaños no ha pasado
+     * si el dia del cumpleaños es mayor al dia actual, el cumpleaños no ha pasado
      * por lo tanto se le resta un año a la edad
      */
     if (ageDate.getMonth == new Date().getMonth) {
-        if (ageDate.getDay < new Date().getDay) {
+        if (ageDate.getDay > new Date().getDay) {
             edad--;
         }
     }
