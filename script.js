@@ -59,15 +59,16 @@ function getAge(birthday) {
     var edad = Math.abs(ageDate.getUTCFullYear() - 1970);
     //El codigo original calculaba la fecha independientemente del mes y del dia de nacimiento
     /*
-     *Si el mes de la fecha del cumpleaños aun no ha pasado (es mayor) que el mes de la fecha actual es porque
-     *el cumpleaños no ha pasado por lo tanto se le resta un año a la edad
+     * Si el mes de la fecha del cumpleaños aun no ha pasado (es mayor que el mes de la fecha actual)
+     * es porque el cumpleaños no ha pasado por lo tanto se le resta un año a la edad
     */
     if (ageDate.getMonth > new Date().getMonth) {
         edad--;
     }
     /*
      * Si el mes es el mismo, la edad la determina el dia de cumpleaños
-     * si el dia del cumpleaños es menor al dia actual el cumpleaños no ha pasado, por lo tanto se le resta un año a la edad
+     * si el dia del cumpleaños es menor al dia actual, el cumpleaños no ha pasado
+     * por lo tanto se le resta un año a la edad
      */
     if (ageDate.getMonth == new Date().getMonth) {
         if (ageDate.getDay < new Date().getDay) {
